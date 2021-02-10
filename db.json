@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Avocado hoodie",
-      "image": "src/assets/lovely-avocado-letter-you-complete-me-printed-long-sleeve-pullover-hoodie_1577520414564.jpg",
+      "image": "http://localhost:3000/assets/lovely-avocado-letter-you-complete-me-printed-long-sleeve-pullover-hoodie_1577520414564.jpg",
       "inStock": 10,
       "details": ["90% Cotton", "10% Elastane"],
       "sizes": [
@@ -14,25 +14,25 @@
       "colors": [
         {
           "colorName": "green",
-          "image": "src/assets/lovely-avocado-letter-you-complete-me-printed-long-sleeve-pullover-hoodie_1577520414564.jpg"
+          "image": "http://localhost:3000/assets/lovely-avocado-letter-you-complete-me-printed-long-sleeve-pullover-hoodie_1577520414564.jpg"
         },
         {
           "colorName": "black",
-          "image": "src/assets/51W+LN92EoL._AC_UX679_.jpg"
+          "image": "http://localhost:3000/assets/51W+LN92EoL._AC_UX679_.jpg"
         }
       ]
     },
     {
       "id": 2,
       "name": "Avocado socks",
-      "image": "src/assets/61NgmYolDQL._AC_UX569_.jpg",
+      "image": "http://localhost:3000/assets/61NgmYolDQL._AC_UX569_.jpg",
       "inStock": 5,
       "details": ["70% Cotton", "5% Elastane", "25% Polyester"]
     },
     {
       "id": 3,
       "name": "Avocado T-shirt",
-      "image": "src/assets/61sU53Og1rL._AC_UL1500_.jpg",
+      "image": "http://localhost:3000/assets/61sU53Og1rL._AC_UL1500_.jpg",
       "inStock": 20,
       "details": ["60% Cotton", "20% Polyester, 20% Viscose"]
     }

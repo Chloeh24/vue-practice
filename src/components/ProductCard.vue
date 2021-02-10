@@ -1,20 +1,16 @@
 <template>
-  <router-link :to="{ name: 'product', params: { id: { id } } }">
-    <div @click="what" class="product-card">
+  <router-link :to="{ name: 'product', params: { id: product.id } }">
+    <div class="product-card">
       <h4>{{ name }}</h4>
       <img :src="image" />
+      <p>£{{ price }}</p>
     </div>
   </router-link>
 </template>
 
 <script>
 export default {
-  props: { id: Number, name: String, image: String, product: Object },
-  methods: {
-    what() {
-      console.log(this.id, this.product, this.image);
-    },
-  },
+  props: { name: String, image: String, price: Number, product: Object },
 };
 </script>
 

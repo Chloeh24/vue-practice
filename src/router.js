@@ -16,7 +16,7 @@ export default new VueRouter({
       component: Home,
     },
     {
-      path: "/product/:id",
+      path: "/products/:id",
       name: "product",
       component: ProductPage,
       props: true,
@@ -25,6 +25,7 @@ export default new VueRouter({
       path: "/cart",
       name: "shopping-cart",
       component: ShoppingCart,
+      props: true,
     },
   ],
 });

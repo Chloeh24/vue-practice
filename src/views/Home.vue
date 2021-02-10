@@ -1,5 +1,5 @@
 <template>
-  <div id="#app">
+  <div>
     <h1>Welcome to the Avo Shop!</h1>
     <div class="products">
       <ProductCard
@@ -7,6 +7,7 @@
         :key="product.id"
         :name="product.name"
         :image="product.image"
+        :price="product.price"
         :product="product"
       />
     </div>
@@ -15,7 +16,7 @@
 
 <script>
 import ProductCard from "@/components/ProductCard.vue";
-import axios from "axios";
+import { getProducts } from "@/utils/getData.js";
 
 export default {
   components: {
@@ -27,8 +28,7 @@ export default {
     };
   },
   created() {
-    axios
-      .get(`http://localhost:3000/products`)
+    getProducts()
       .then((res) => (this.products = res.data))
       .catch((err) => console.log(err));
   },
