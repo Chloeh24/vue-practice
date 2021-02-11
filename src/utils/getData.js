@@ -17,7 +17,7 @@ function getProduct(id) {
 }
 
 function postReview(id, review) {
-  return apiClient.put(`/products/${id}`, review);
+  return apiClient.post(`/products/${id}`, { reviews: [review] });
 }
 
 export { getProduct, getProducts, postReview };

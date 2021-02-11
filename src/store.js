@@ -1,11 +1,13 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import { postReview } from "@/utils/getData";
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
     cart: [],
+    reviews: [],
   },
   mutations: {
     ADD_TO_CART(state, item) {
@@ -18,6 +20,9 @@ export default new Vuex.Store({
         }
       });
     },
+    ADD_REVIEW(state, review) {
+      state.reviews.push(review);
+    },
   },
   actions: {
     addToCart({ commit }, product) {
@@ -25,6 +30,12 @@ export default new Vuex.Store({
     },
     deleteFromCart({ commit }, id) {
       commit("DELETE_ITEM", id);
+    },
+    addReview({ commit }, review) {
+      return postReview(review.productid, review).then((res) => {
+        console.log(res.data);
+        commit("ADD_REVIEW", review);
+      });
     },
   },
 });

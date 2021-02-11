@@ -13,7 +13,6 @@
 
 <script>
 import NavBar from "./components/NavBar.vue";
-import { postReview } from "@/utils/getData";
 export default {
   computed: {
     cart() {
@@ -31,8 +30,8 @@ export default {
       this.$store.dispatch("deleteFromCart", id);
     },
     addReview(review) {
-      postReview(review.productid, review)
-        .then((res) => [...res.reviews, review])
+      this.$store
+        .dispatch("addReview", review)
         .catch((err) => console.log(err));
     },
   },
